@@ -58,6 +58,12 @@ all apis
 
                            }
 
+7. url   localhost + "/api/alldata"
+       discription :   to display every data of the database
+       method : get
+       input data type : json
+       inout format :   nil
+
 
 
 
