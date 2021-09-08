@@ -108,7 +108,7 @@ def codinatea_add():
 def remove_all():
     try:
         reply = Table.remove()
-        out = {'Status': 'Successfully reset database',
+        out = {'Status': 'Successfully reset database'
                }
         return jsonify(out)
     except:
@@ -152,6 +152,23 @@ def update_cordinates():
         return jsonify(out)
     except:
         return jsonify({'message': 'error in updating cordinates'})
+
+#to display every data of the database
+@app.route("/api/alldata", methods=['GET'])
+def all_data():
+    try:
+        reply = Table.find({},{'_id' : 0})
+        lst = []
+        for i in reply:
+            lst.append(i)
+
+        out = {'alldata': lst
+               }
+        return jsonify(out)
+    except:
+        return jsonify({'message': 'error in fetching all data'})
+
+
 
 
 if __name__ == '__main__':
