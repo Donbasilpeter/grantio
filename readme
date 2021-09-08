@@ -1,0 +1,66 @@
+weather api backend
+=====================
+
+The application is implemented using flask framework which is connected to mongodb database in cloud.
+forcast is obtained from weather api using the loctation or the cordinates
+
+
+all apis
+=========
+
+1. url =  localhost + "/api/location"
+       discription :add forcast data obtained form weatherapi into database by location
+       method : post
+       input data type : json
+       input format :   {
+                             "location" :"paris",
+                              "max" : "556",
+                                "min" : "89"
+                          }
+2.  url = localhost + "/api/cordinate"
+       discription :add forcast obtained from weatherapi  into database by cordinates
+       method : post
+       input data type : json
+       input format :   {
+                              "longitude": "67",
+                              "latitude" : "25",
+                               "max" : "9777770",
+                                "min" : "89"
+                         }
+
+3. url =  localhost + "/api/reset"
+       discription :delete all elements in database
+       method : get
+       input data type : json
+       input format :  nil
+4. url =  localhost + "/api/data"
+       discription :query a data based on the document id
+       method : post
+       input data type : json
+       inout format :   {
+                                "Document_ID": "6138680b588c1647575c9cd6",
+                           }
+5. url  localhost + "/api/delete"
+       discription :delete a single data based on its id
+       method : post
+       input data type : json
+       inout format :   {
+                                "Document_ID": "6138680b588c1647575c9cd6",
+                           }
+6. url   localhost + "/api/update"
+       discription :update the cordinates of all the elements who has a specific location
+       method : post
+       input data type : json
+       inout format :   {
+                             "location" :"paris",
+                               "longitude": "67",
+                              "latitude" : "25"
+
+                           }
+
+
+
+
+
+
+

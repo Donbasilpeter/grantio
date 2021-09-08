@@ -1,0 +1,8 @@
+{
+"connection_url"  : "mongodb+srv://donbasilpeter:kvdZ9ZryU4SqcgC@cluster0.okuwb.mongodb.net/weather?retryWrites=true&w=majority",
+"database" : "weather",
+"table" : "weather",
+"api-key" : "b166c6b8210b41f1850132028210609",
+"forecast-days" : "3",
+"weather-api" : "https://api.weatherapi.com/v1/forecast.json?key={}&q={}&days={}&aqi=no&alerts=no"
+}
